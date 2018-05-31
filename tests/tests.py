@@ -14,21 +14,19 @@ class FakeSocketObject(object):
     sended = None
 
     def __init__(self, *args, **kwargs):
-        print("plop")
         pass
 
     def connect(self, *args, **kwargs):
-        return True
+        pass
 
     def close(self, *args, **kwargs):
-        return True
+        pass
 
     def settimeout(self, *args, **kwargs):
-        return True
+        pass
 
     def sendall(self, data, *args, **kwargs):
         self.sended = data
-        return True
 
 
 class TelegrafUnixSocketClientTestCase(unittest.TestCase):

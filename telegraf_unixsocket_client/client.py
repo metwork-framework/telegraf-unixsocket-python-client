@@ -70,4 +70,6 @@ class TelegrafUnixSocketClient(object):
             point['time'] = timestamp
         data['points'] = [point]
         msg = line_protocol.make_lines(data, precision)
-        self._sock.sendall(msg.encode('utf8'))
+        encoded_msg = msg.encode('utf8')
+        self._sock.sendall(encoded_msg)
+        return encoded_msg
