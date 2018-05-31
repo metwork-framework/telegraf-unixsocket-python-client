@@ -1,0 +1,5 @@
+-r requirements.txt
+
+nose
+flake8
+mock ; python_version < '3.0'
