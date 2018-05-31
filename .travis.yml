@@ -9,4 +9,4 @@ python:
 install:
     - pip install -r test-requirements.txt
     - python setup.py develop
-script: make coveralls
+script: make test
