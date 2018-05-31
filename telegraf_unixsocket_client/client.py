@@ -23,15 +23,15 @@ class TelegrafUnixSocketClient(object):
 
     unix_socket_path = None
     unix_socket_timeout = DEFAULT_UNIX_SOCKET_TIMEOUT
-    telegraf_tags = None
+    tags = None
     _sock = None
 
     def __init__(self, unix_socket_path,
                  unix_socket_timeout=DEFAULT_UNIX_SOCKET_TIMEOUT,
-                 telegraf_tags={}):
+                 tags={}):
         self.unix_socket_path = unix_socket_path
         self.unix_socket_timeout = unix_socket_timeout
-        self.telegraf_tags = telegraf_tags
+        self.tags = tags
 
     def connect(self, bypass_unix_socket_check=False):
         if not bypass_unix_socket_check:
@@ -57,8 +57,12 @@ class TelegrafUnixSocketClient(object):
                 "This client is not connected, please call connect() method "
                 "before sending measurements")
         data = {}
-        if len(self.telegraf_tags) > 0:
-            data['tags'] = self.telegraf_tags
+        if len(self.tags) > 0:
+            data['tags'] = self.tags.copy()
+            data['tags'].update(extra_tags)
+        else:
+            if len(extra_tags) > 0:
+                data['tags'] = extra_tags
         data['measurement'] = name
         point = {}
         point['fields'] = fields_dict
