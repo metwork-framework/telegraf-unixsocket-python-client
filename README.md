@@ -16,7 +16,7 @@ A tiny and very limited python client to send metrics to telegraf through an uni
 ## Example
 
 ```python
-from telegraf-unixsocket-client import TelegrafUnixSocketClient
+from telegraf_unixsocket_client import TelegrafUnixSocketClient
 
 client = TelegrafUnixSocketClient("/tmp/telegraf.socket")
 client.connect()
