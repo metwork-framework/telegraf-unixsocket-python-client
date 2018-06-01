@@ -3,7 +3,6 @@
 ## Status
 
 [![Travis](https://img.shields.io/travis/metwork-framework/telegraf-unixsocket-python-client.svg)](https://travis-ci.org/metwork-framework/telegraf-unixsocket-python-client)
-[![Code Health](https://landscape.io/github/metwork-framework/telegraf-unixsocket-python-client/master/landscape.png)](https://landscape.io/github/metwork-framework/telegraf-unixsocket-python-client/master)
 [![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/metwork-framework/docker-centos-opinionated/blob/master/LICENSE)
 [![Maturity](https://img.shields.io/badge/maturity-beta-yellow.svg)](https://github.com/metwork-framework/docker-centos-opinionated)
 [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)](https://github.com/metwork-framework)
