@@ -2,10 +2,8 @@
 
 ## Status
 
-[![Travis](https://img.shields.io/travis/metwork-framework/telegraf-unixsocket-python-client.svg)](https://travis-ci.org/metwork-framework/telegraf-unixsocket-python-client)
-[![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/metwork-framework/docker-centos-opinionated/blob/master/LICENSE)
-[![Maturity](https://img.shields.io/badge/maturity-beta-yellow.svg)](https://github.com/metwork-framework/docker-centos-opinionated)
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)](https://github.com/metwork-framework)
+[![GitHub CI](https://github.com/metwork-framework/telegraf-unixsocket-python-client/workflows/CI/badge.svg?branch=master)](https://github.com/metwork-framework/telegraf-unixsocket-python-client/actions?query=workflow%3ACI+branch%3Amaster)
+[![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/metwork-framework/telegraf-unixsocket-python-client/blob/master/LICENSE)
 
 ## What is it ?
 
