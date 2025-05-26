@@ -19,7 +19,7 @@ clean:
 
 test:
 	flake8 .
-	cd tests && nosetests
+	cd tests && nose2
 
 upload:
 	python setup.py sdist register upload
