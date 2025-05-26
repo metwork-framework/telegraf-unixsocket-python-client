@@ -56,8 +56,8 @@ class TelegrafUnixSocketClientTestCase(unittest.TestCase):
         client = TelegrafUnixSocketClient("/foo/bar")
         client.connect(bypass_unix_socket_check=True)
         client.send_measurement("foo", {"field1": 1.23, "field2": 4.56})
-        self.assertEquals(client._sock.sended,
-                          b'foo field1=1.23,field2=4.56\n')
+        self.assertEqual(client._sock.sended,
+                         b'foo field1=1.23,field2=4.56\n')
         client.close()
         socket.socket = orig_constructor
 
@@ -69,7 +69,7 @@ class TelegrafUnixSocketClientTestCase(unittest.TestCase):
         client.connect(bypass_unix_socket_check=True)
         client.send_measurement("foo", {"field1": 1.23, "field2": 4.56},
                                 extra_tags={"foo2": "v2"})
-        self.assertEquals(client._sock.sended,
-                          b'foo,foo1=v1,foo2=v2 field1=1.23,field2=4.56\n')
+        self.assertEqual(client._sock.sended,
+                         b'foo,foo1=v1,foo2=v2 field1=1.23,field2=4.56\n')
         client.close()
         socket.socket = orig_constructor
